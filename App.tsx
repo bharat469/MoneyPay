@@ -1,40 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React, {useState} from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  Button,
-  FlatList,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import axios from 'axios';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+
 import NavigationContainer from './src/navigation';
-
+import {Provider} from 'react-redux';
+import store from './src/utils/redux/store';
 const App = () => {
   return (
     <SafeAreaView style={styles.allApp}>
       <StatusBar />
-
-      <NavigationContainer />
+      <Provider store={store}>
+        <NavigationContainer />
+      </Provider>
     </SafeAreaView>
   );
 };

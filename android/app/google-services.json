@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569484646745",
+    "project_id": "moneypay-36524",
+    "storage_bucket": "moneypay-36524.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569484646745:android:262ef7525686e513c51448",
+        "android_client_info": {
+          "package_name": "com.moneypay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChEMWLqsG4A8qXwuchBv5vXKIJymSJtTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
