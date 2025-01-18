@@ -132,8 +132,8 @@ const LoginScreen = () => {
   };
 
   return (
-      <LinearGradient   style={styles.loginScreenContainer}  colors={[ '#1f1c2c', '#928dab']} >
-    <KeyboardAwareScrollView>
+     
+    <KeyboardAwareScrollView style={styles.loginScreenContainer} >
 
     
       <View style={styles.loginView}>
@@ -202,7 +202,7 @@ const LoginScreen = () => {
         </TouchableWithoutFeedback>
       </View>
     </KeyboardAwareScrollView>
-      </LinearGradient>
+     
   );
 };
 
