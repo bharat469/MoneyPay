@@ -12,9 +12,9 @@ const ChatDetailScreen = ({ route}) => {
   const [newMessage, setNewMessage] = useState('');
 
   const renderMessage = ({ item }) =>{ 
-   
+
     return(
-    <View style={item.sender === 'me' ? styles.myMessage : styles.theirMessage}>
+    <View style={item?.sentBy===currentUserId ? styles.myMessage : styles.theirMessage}>
       <Text style={styles.messageText}>{item.text}</Text>
       <Text style={styles.messageTimestamp}>
           {new Date(item.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

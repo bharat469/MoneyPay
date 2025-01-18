@@ -25,6 +25,7 @@ import auth from '@react-native-firebase/auth';
 import {useDispatch} from 'react-redux';
 import {storeToken} from '../utils/redux/authSlice';
 import firestore from '@react-native-firebase/firestore'
+import LinearGradient from 'react-native-linear-gradient'
 
 const LoginScreen = () => {
   const dispatch = useDispatch();
@@ -131,7 +132,10 @@ const LoginScreen = () => {
   };
 
   return (
-    <KeyboardAwareScrollView style={styles.loginScreenContainer}>
+      <LinearGradient   style={styles.loginScreenContainer}  colors={[ '#1f1c2c', '#928dab']} >
+    <KeyboardAwareScrollView>
+
+    
       <View style={styles.loginView}>
         <LoginSvg width={wp(78)} height={hp(50)} />
         {loading ? (
@@ -165,7 +169,7 @@ const LoginScreen = () => {
                   ? {borderColor: COLORS.redColor, borderWidth: 2}
                   : null,
               ]}
-              secureTextEntry={true}
+              secureTextEntry={false}
               onChangeText={text =>
                 setLoginData({...LoginData, password: text})
               }
@@ -198,6 +202,7 @@ const LoginScreen = () => {
         </TouchableWithoutFeedback>
       </View>
     </KeyboardAwareScrollView>
+      </LinearGradient>
   );
 };
 
