@@ -14,7 +14,7 @@ const InputComponent = (props) => {
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
        style={style}
-        keyboardType={keyboardType}
+        // keyboardType={keyboardType}
       />
     </View>
   )
@@ -25,6 +25,7 @@ export default InputComponent
 const styles = StyleSheet.create({
     inputContainer:{
         backgroundColor:COLORS.whiteColor,
+        color:COLORS.blackColor,
         width:Width(80),
         borderRadius:6,
         marginVertical:6,
